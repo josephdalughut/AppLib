@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_dark_rectangle"
+    android:clickable="true"
+    >
+
+    <ng.joey.lib.android.gui.view.textView.TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:padding="@dimen/margin_page_half"
+        android:minHeight="@dimen/height_toolbar_normal"
+        android:gravity="center"
+        android:textColor="@color/flat_asbestos"
+        app:fontAppearance="body2"
+        android:id="@+id/textView"
+        />
+
+</LinearLayout>

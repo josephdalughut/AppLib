@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TabLayout">
+        <attr name="allCaps" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="RoundedFrameLayout">
+        <attr name="radiusTopLeft" format="dimension"/>
+        <attr name="radiusTopRight" format="dimension"/>
+        <attr name="radiusBottomLeft" format="dimension"/>
+        <attr name="radiusBottomRight" format="dimension"/>
+        <attr name="backgroundColor" format="color"/>
+        <attr name="clipPath" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="SquareFrameLayout">
+        <attr name="squareBy" format="enum">
+            <enum name="WIDTH" value="0"/>
+            <enum name="HEIGHT" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="SizeMatchingTextView">
+        <attr name="matchBy" format="enum">
+            <enum name="WIDTH" value="0"/>
+            <enum name="HEIGHT" value="1"/>
+            <enum name="HALF_WIDTH" value="3"/>
+            <enum name="HALF_HEIGHT" value="4"/>
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="TextView">
+        <attr name="fontSize" format="enum">
+            <enum name="caption" value="1"/>
+            <enum name="body1" value="2"/>
+            <enum name="body2" value="3"/>
+            <enum name="button" value="4"/>
+            <enum name="subhead" value="5"/>
+            <enum name="title" value="6"/>
+            <enum name="headline" value="7"/>
+            <enum name="display1" value="8"/>
+            <enum name="display2" value="9"/>
+            <enum name="display3" value="10"/>
+            <enum name="display4" value="11"/>
+        </attr>
+        <attr name="fontAppearance" format="enum">
+            <enum name="caption" value="1"/>
+            <enum name="body1" value="2"/>
+            <enum name="body2" value="3"/>
+            <enum name="button" value="4"/>
+            <enum name="subhead" value="5"/>
+            <enum name="title" value="6"/>
+            <enum name="headline" value="7"/>
+            <enum name="display1" value="8"/>
+            <enum name="display2" value="9"/>
+            <enum name="display3" value="10"/>
+            <enum name="display4" value="11"/>
+        </attr>
+        <attr name="fontStyle" format="enum">
+            <enum name="bold" value="0"/>
+            <enum name="boldItalic" value="1"/>
+            <enum name="italic" value="2"/>
+            <enum name="light" value="3"/>
+            <enum name="lightItalic" value="4"/>
+            <enum name="regular" value="5"/>
+            <enum name="semiBold" value="6"/>
+            <enum name="semiBoldItalic" value="7"/>
+            <enum name="thin" value="8"/>
+            <enum name="thinItalic" value="9"/>
+
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CircularImageView">
+        <attr name="circularBorderWidth" format="dimension"/>
+        <attr name="circularFillColor" format="color"/>
+        <attr name="circularBorderColor" format="color"/>
+        <attr name="circularShadow" format="boolean"/>
+        <attr name="circularImageOverlay" format="boolean"/>
+    </declare-styleable>
+
+
+    <attr name="cropImageStyle" format="reference" />
+
+    <declare-styleable name="CropImageView">
+        <attr name="highlightColor" format="reference|color" />
+        <attr name="showThirds" format="boolean" />
+        <attr name="showCircle" format="boolean" />
+        <attr name="showHandles">
+            <enum name="changing" value="0" />
+            <enum name="always" value="1" />
+            <enum name="never" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="PigressBar">
+        <attr name="pigressColor" format="color"/>
+        <attr name="pigressProgress" format="float"/>
+        <attr name="pigressMax" format="float"/>
+        <attr name="pigressIndeterminate" format="boolean"/>
+        <attr name="pigressDuration" format="integer"/>
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,260 @@
+[{
+	"subdivision_category": "state",
+	"code_3166_2": "NG-AB",
+	"subdivision_name": "Abia",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "capital territory",
+	"code_3166": "NG-FC",
+	"subdivision_name": "Abuja Federal Capital Territory",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-AD",
+	"subdivision_name": "Adamawa",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-AK",
+	"subdivision_name": "Akwa Ibom",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-AN",
+	"subdivision_name": "Anambra",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-BA",
+	"subdivision_name": "Bauchi",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-BY",
+	"subdivision_name": "Bayelsa",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-BE",
+	"subdivision_name": "Benue",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-BO",
+	"subdivision_name": "Borno",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-CR",
+	"subdivision_name": "Cross River",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-DE",
+	"subdivision_name": "Delta",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-EB",
+	"subdivision_name": "Ebonyi",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-ED",
+	"subdivision_name": "Edo",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-EK",
+	"subdivision_name": "Ekiti",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-EN",
+	"subdivision_name": "Enugu",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-GO",
+	"subdivision_name": "Gombe",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-IM",
+	"subdivision_name": "Imo",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-JI",
+	"subdivision_name": "Jigawa",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-KD",
+	"subdivision_name": "Kaduna",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-KN",
+	"subdivision_name": "Kano",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-KT",
+	"subdivision_name": "Katsina",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-KE",
+	"subdivision_name": "Kebbi",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-KO",
+	"subdivision_name": "Kogi",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-KW",
+	"subdivision_name": "Kwara",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-LA",
+	"subdivision_name": "Lagos",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-NA",
+	"subdivision_name": "Nasarawa",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-NI",
+	"subdivision_name": "Niger",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-OG",
+	"subdivision_name": "Ogun",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-ON",
+	"subdivision_name": "Ondo",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-OS",
+	"subdivision_name": "Osun",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-OY",
+	"subdivision_name": "Oyo",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-PL",
+	"subdivision_name": "Plateau",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-RI",
+	"subdivision_name": "Rivers",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-SO",
+	"subdivision_name": "Sokoto",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-TA",
+	"subdivision_name": "Taraba",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-YO",
+	"subdivision_name": "Yobe",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}, {
+	"subdivision_category": "state",
+	"code_3166_2": "NG-ZA",
+	"subdivision_name": "Zamfara",
+	"language_code": "en",
+	"romanization_system": "",
+	"parent_subdivision": ""
+}]

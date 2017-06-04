@@ -1,0 +1,64 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="text_size_button">14sp</dimen>
+    <dimen name="text_size_caption">12sp</dimen>
+    <dimen name="text_size_tiny">8sp</dimen>
+    <dimen name="text_size_body1">14sp</dimen>
+    <dimen name="text_size_body2">14sp</dimen>
+    <dimen name="text_size_subHead">16sp</dimen>
+    <dimen name="text_size_title">20sp</dimen>
+    <dimen name="text_size_headline">24sp</dimen>
+    <dimen name="text_size_display1">34sp</dimen>
+    <dimen name="text_size_display2">45sp</dimen>
+    <dimen name="text_size_display3">56sp</dimen>
+    <dimen name="text_size_display4">112sp</dimen>
+
+    <dimen name="elevation_default_dialog">24dp</dimen>
+    <dimen name="elevation_default_picker">24dp</dimen>
+    <dimen name="elevation_default_navigation_drawer">16dp</dimen>
+    <dimen name="elevation_default_right_drawer">16dp</dimen>
+    <dimen name="elevation_default_bottom_sheet">16dp</dimen>
+    <dimen name="elevation_default_fab_pressed">12dp</dimen>
+    <dimen name="elevation_default_fab_above">14dp</dimen>
+    <dimen name="elevation_default_sub_menu">9dp</dimen>
+    <dimen name="elevation_default_menu">8dp</dimen>
+    <dimen name="elevation_default_card_pickedUpState">8dp</dimen>
+    <dimen name="elevation_default_button_raised_pressedState">8dp</dimen>
+    <dimen name="elevation_default_fab_rest">6dp</dimen>
+    <dimen name="elevation_default_snackbar">6dp</dimen>
+    <dimen name="elevation_default_app_bar">4dp</dimen>
+    <dimen name="elevation_default_above_app_bar">5dp</dimen>
+    <dimen name="elevation_default_below_app_bar">3dp</dimen>
+    <dimen name="elevation_default_refresh_indicator">3dp</dimen>
+    <dimen name="elevation_default_search_bar_scrollState">3dp</dimen>
+    <dimen name="elevation_default_quick_entry_scrollState">3dp</dimen>
+    <dimen name="elevation_default_card_restState">2dp</dimen>
+    <dimen name="elevation_default_button_raised_restState">2dp</dimen>
+    <dimen name="elevation_default_search_bar_restState">2dp</dimen>
+    <dimen name="elevation_default_quick_entry_restState">2dp</dimen>
+    <dimen name="elevation_default_switch">1dp</dimen>
+
+    <dimen name="fab_elevation">6dp</dimen>
+    <dimen name="fab_size_mini">40dp</dimen>
+    <dimen name="fab_size_normal">56dp</dimen>
+    <dimen name="height_toolbar">50dp</dimen>
+
+    <dimen name="margin_page">16dp</dimen>
+    <dimen name="height_button_normal_double">80dp</dimen>
+    <dimen name="height_toolbar_normal_double">100dp</dimen>
+    <dimen name="height_button_normal">40dp</dimen>
+    <dimen name="height_toolbar_normal">50dp</dimen>
+    <dimen name="height_button_normal_half">20dp</dimen>
+    <dimen name="radius_card_simple_imageView">4dp</dimen>
+    <dimen name="margin_page_half">8dp</dimen>
+    <dimen name="size_pigressBar_small">20dp</dimen>
+    <dimen name="height_profile_cover">200dp</dimen>
+    <dimen name="gap">4dp</dimen>
+    <dimen name="list_buddies_gap">4dp</dimen>
+
+</resources>
