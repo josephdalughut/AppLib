@@ -8,7 +8,7 @@ android {
         minSdkVersion 11
         targetSdkVersion 25
         versionCode 1
-        versionName "0.1.0"
+        versionName "0.1.2"
         project.archivesBaseName = "android"
         setProperty("archivesBaseName", "${archivesBaseName}-$versionName")
     }
@@ -26,6 +26,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:design:25.3.1'
     compile 'com.android.support:cardview-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.mcxiaoke.volley:library:1.0.19'
 
     compile 'net.zetetic:android-database-sqlcipher:3.5.4'
     compile 'org.springframework.security:spring-security-crypto:4.2.1.RELEASE'

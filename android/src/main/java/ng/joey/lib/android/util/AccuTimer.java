@@ -1,4 +1,4 @@
-package ng.joey.lib.android.gui.util;
+package ng.joey.lib.android.util;
 
 import android.os.Handler;
 import android.os.Message;

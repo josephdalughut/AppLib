@@ -151,39 +151,6 @@ public class Token extends ng.joey.lib.rest.entity.Entity {
         return setSecret(Value.Random.UUID());
     }
 
-    /**
-     * A class to serialize entities of type {@link Token} to JsonStrings
-     */
-    public static class TokenSerializer extends EntitySerializer<Token>{
-        @Override
-        public JsonObject serialize(Token src, JsonObject object) {
-            object.addProperty(Constants.Fields.ID, src.getId());
-            object.addProperty(Constants.Fields.USER_ID, src.getUserId());
-            object.addProperty(Constants.Fields.EXPIRES_AT, src.getExpiresAt());
-            object.addProperty(Constants.Fields.SECRET, src.getSecret());
-            object.addProperty(Constants.Fields.CLIENT_ID, src.getClientId());
-            object.addProperty(Constants.Fields.TYPE, src.getType());
-            object.addProperty(Constants.Fields.SCOPE, src.getScope());
-            return object;
-        }
-    }
-
-    /**
-     * A class to deserializer JsonStrings into entities of type {@link Token}
-     */
-    public static class TokenDeserializer extends EntityDeserializer<Token>{
-        @Override
-        public Token deserialize(JsonObject object) {
-            return new Token()
-                    .setId(Value.TO.stringValue(Constants.Fields.ID, object))
-                    .setType(Value.TO.stringValue(Constants.Fields.TYPE, object))
-                    .setSecret(Value.TO.stringValue(Constants.Fields.SECRET, object))
-                    .setClientId(Value.TO.longValue(Constants.Fields.CLIENT_ID, object))
-                    .setExpiresAt(Value.TO.longValue(Constants.Fields.EXPIRES_AT, object))
-                    .setScope(Value.TO.stringValue(Constants.Fields.SCOPE, object))
-                    .setUserId(Value.TO.stringValue(Constants.Fields.USER_ID, object));
-        }
-    }
 
     public static class Type {
         public static final String REQUEST_TOKEN = "request_token";

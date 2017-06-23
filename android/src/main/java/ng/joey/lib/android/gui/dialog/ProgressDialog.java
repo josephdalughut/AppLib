@@ -8,18 +8,11 @@ import android.widget.ImageButton;
 import android.widget.ProgressBar;
 
 import ng.joey.lib.android.gui.util.ViewUtils;
-import ng.joey.lib.android.gui.view.progress.PigressBar;
 import ng.joey.lib.android.R;
 import ng.joey.lib.android.gui.view.textView.TextView;
 import ng.joey.lib.java.util.Value;
 
-/**
- * Created by Joey Dalughut on 8/13/16 at 1:11 PM,
- * Project: Skout.
- * Copyright (c) 2016 LITIGY. All rights reserved.
- * http://www.litigy.com
- */
-public class ProgressDialog extends DialogFragtivity {
+public class ProgressDialog extends DialogFragment {
 
     public static ProgressDialog getInstance(String title, String message, boolean cancelOnBack){
         return new ProgressDialog().setTitle(title).setMessage(message)
@@ -99,15 +92,11 @@ public class ProgressDialog extends DialogFragtivity {
     }
 
     @Override
-    public void findViews() {
+    public void setupViews() {
         cancelButton = (ImageButton) findViewById(R.id.cancelButton);
         titleTextView = (TextView) findViewById(R.id.titleTextView);
         messageTextView = (TextView) findViewById(R.id.messageTextView);
         barProgress = (ProgressBar) findViewById(R.id.barProgress);
-    }
-
-    @Override
-    public void setupViews() {
         titleTextView.setText(title);
         messageTextView.setText(message);
         getDialog().setCancelable(isCancelOnBack());

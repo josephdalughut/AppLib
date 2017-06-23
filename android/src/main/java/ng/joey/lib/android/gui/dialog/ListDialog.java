@@ -12,7 +12,6 @@ import android.widget.ProgressBar;
 
 import java.util.List;
 
-import ng.joey.lib.android.gui.view.progress.PigressBar;
 import ng.joey.lib.android.R;
 import ng.joey.lib.android.gui.adapter.GenericRecyclerViewItemAdapter;
 import ng.joey.lib.android.gui.view.textView.TextView;
@@ -28,14 +27,14 @@ import ng.joey.lib.java.util.Value;
  * Copyright (c) 2016 LITIGY. All rights reserved.
  * http://www.litigy.com
  */
-public class ListDialog<T> extends DialogFragtivity {
+public class ListDialog<T> extends DialogFragment {
 
     public static <T> ListDialog<T> getInstance(String title, List<T> items,
-                                         @NonNull DoubleReceiver<T, Integer> callbackReceiver,
+                                         @NonNull OnItemClickListener<T> onItemClickListener,
                                                 @NonNull Consumer<String, T> textItemRetriever,
                                          boolean cancelOnBack){
         return new ListDialog<T>().setTitle(title).setItems(items).setTextItemRetreiver(textItemRetriever).setCancelOnBack(cancelOnBack)
-                .setCallbackReceiver(callbackReceiver);
+                .setOnItemClickListener(onItemClickListener);
     }
 
     private String title;
@@ -45,15 +44,15 @@ public class ListDialog<T> extends DialogFragtivity {
     ImageButton cancelButton;
     List<T> items = null;
     boolean cancelOnBack = true;
-    DoubleReceiver<T, Integer> callbackReceiver;
+    OnItemClickListener<T> onItemClickListener;
     Consumer<String, T> textItemRetreiver;
 
-    public DoubleReceiver<T, Integer> getCallbackReceiver() {
-        return callbackReceiver;
+    public OnItemClickListener<T> getOnItemClickListener() {
+        return onItemClickListener;
     }
 
-    public ListDialog<T> setCallbackReceiver(DoubleReceiver<T, Integer> callbackReceiver) {
-        this.callbackReceiver = callbackReceiver;
+    public ListDialog setOnItemClickListener(OnItemClickListener<T> onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
         return this;
     }
 
@@ -125,15 +124,11 @@ public class ListDialog<T> extends DialogFragtivity {
     }
 
     @Override
-    public void findViews() {
+    public void setupViews() {
         cancelButton = (ImageButton) findViewById(R.id.cancelButton);
         titleTextView = (TextView) findViewById(R.id.titleTextView);
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         progressBar = (ProgressBar) findViewById(R.id.barProgress);
-    }
-
-    @Override
-    public void setupViews() {
         showProgress();
         titleTextView.setText(title);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
@@ -205,8 +200,8 @@ public class ListDialog<T> extends DialogFragtivity {
                             @Override
                             public void onClick(View view) {
                                 dismissAllowingStateLoss();
-                                if(!Value.IS.nullValue(callbackReceiver)){
-                                    callbackReceiver.onReceive(getItems().get(integer), integer);
+                                if(!Value.IS.nullValue(onItemClickListener)){
+                                    onItemClickListener.onItemClick(getItems().get(integer), integer);
                                 }
                             }
                         });
@@ -261,4 +256,9 @@ public class ListDialog<T> extends DialogFragtivity {
     public boolean cancelable() {
         return false;
     }
+
+    public interface OnItemClickListener<T>{
+        public void onItemClick(T t, int position);
+    }
+
 }

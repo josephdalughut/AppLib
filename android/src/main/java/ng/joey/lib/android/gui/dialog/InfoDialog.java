@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
+import butterknife.BindView;
 import ng.joey.lib.android.gui.view.button.Button;
 import ng.joey.lib.android.R;
 import ng.joey.lib.android.gui.view.textView.TextView;
@@ -16,10 +17,10 @@ import ng.joey.lib.java.util.Value;
  * Copyright (c) 2016 LITIGY. All rights reserved.
  * http://www.litigy.com
  */
-public class InfoDialog extends DialogFragtivity {
+public class InfoDialog extends DialogFragment {
 
     public static interface OnClickListener{
-        public void onClick(View view, DialogFragtivity dialog);
+        public void onClick(View view, DialogFragment dialog);
     }
 
     public static InfoDialog getInstance(String title, String message, boolean cancelOnBack){
@@ -74,10 +75,13 @@ public class InfoDialog extends DialogFragtivity {
     }
 
     OnClickListener positiveListener, negativeListener, neutralListener;
-    Button positiveButton, negativeButton, neutralButton;
+    public Button positiveButton;
+    public Button negativeButton;
+    public Button neutralButton;
     private String title, message, positiveMessage, negativeMessage, neutralMessage;
-    TextView titleTextView, messageTextView;
-    ImageButton cancelButton;
+    public TextView titleTextView;
+    public TextView messageTextView;
+    public ImageButton cancelButton;
     Integer negativeButtonTextColor, positiveButtonTextColor, neutralButtonTextColor;
     boolean cancelOnBack = true;
 
@@ -120,17 +124,13 @@ public class InfoDialog extends DialogFragtivity {
     }
 
     @Override
-    public void findViews() {
+    public void setupViews() {
         cancelButton = (ImageButton) findViewById(R.id.cancelButton);
         titleTextView = (TextView) findViewById(R.id.titleTextView);
         messageTextView = (TextView) findViewById(R.id.messageTextView);
         positiveButton = (Button) findViewById(R.id.positiveButton);
         negativeButton = (Button) findViewById(R.id.negativeButton);
         neutralButton = (Button) findViewById(R.id.neutralButton);
-    }
-
-    @Override
-    public void setupViews() {
         titleTextView.setText(title);
         messageTextView.setText(message);
         getDialog().setCancelable(isCancelOnBack());

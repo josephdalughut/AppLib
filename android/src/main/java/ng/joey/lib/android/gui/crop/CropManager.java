@@ -30,10 +30,9 @@ import android.os.Handler;
 import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.view.View;
-import android.widget.ImageButton;
 
 import ng.joey.lib.android.R;
-import ng.joey.lib.android.gui.fragment.Fragtivity;
+import ng.joey.lib.android.gui.fragment.Fragment;
 import ng.joey.lib.java.util.Value;
 
 import java.io.IOException;
@@ -44,7 +43,7 @@ import java.util.concurrent.CountDownLatch;
 /*
  * Modified from original in AOSP.
  */
-public class CropManager extends Fragtivity {
+public class CropManager extends Fragment {
 
     private Media.CropResultListener cropResultListener;
 
@@ -489,12 +488,6 @@ public class CropManager extends Fragtivity {
         if (rotateBitmap != null) {
             rotateBitmap.recycle();
         }
-    }
-
-
-    @Override
-    public void findViews() {
-        Crop.Log.d("Finding Views");
     }
 
     public boolean isSaving() {

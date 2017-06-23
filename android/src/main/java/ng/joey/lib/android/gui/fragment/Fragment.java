@@ -4,7 +4,6 @@ import android.graphics.Rect;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,13 +11,7 @@ import android.view.ViewTreeObserver;
 
 import butterknife.ButterKnife;
 
-/**
- * Created by Joey Dalughut on 8/10/16 at 5:30 PM,
- * Project: Litigy Libraries.
- * Copyright (c) 2016 LITIGY. All rights reserved.
- * http://www.litigy.com
- */
-public abstract class Fragtivity extends Fragment implements ViewTreeObserver.OnGlobalLayoutListener {
+public abstract class Fragment extends android.support.v4.app.Fragment implements ViewTreeObserver.OnGlobalLayoutListener {
 
     private View rootView;
     private boolean isKeyboardShowing = false;
@@ -29,7 +22,6 @@ public abstract class Fragtivity extends Fragment implements ViewTreeObserver.On
         if(shouldWatchKeyboard())
             getRootView().getViewTreeObserver().addOnGlobalLayoutListener(this);
         ButterKnife.bind(this, rootView);
-        findViews();
         setupViews();
         return rootView;
     }
@@ -99,11 +91,6 @@ public abstract class Fragtivity extends Fragment implements ViewTreeObserver.On
      * @param bundle
      */
     public void bundle(Bundle bundle){}
-
-    /**
-     * Called after the fragment has been created and its view inflated
-     */
-    public abstract void findViews();
 
     /**
      * Called after findViews()

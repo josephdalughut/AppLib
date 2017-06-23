@@ -5,7 +5,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
 
-import ng.joey.lib.android.gui.fragment.Fragtivity;
+import ng.joey.lib.android.gui.fragment.Fragment;
 import ng.joey.lib.android.gui.util.FontUtils;
 
 /**
@@ -28,12 +28,12 @@ public class Snackbar {
         showLong(parent, parent.getResources().getString(message));
     }
 
-    public static void showLong(Fragtivity fragtivity, int message){
-        showLong(fragtivity.getRootView(), message);
+    public static void showLong(Fragment fragment, int message){
+        showLong(fragment.getRootView(), message);
     }
 
-    public static void showLong(Fragtivity fragtivity, String message){
-        showLong(fragtivity.getRootView(), message);
+    public static void showLong(Fragment fragment, String message){
+        showLong(fragment.getRootView(), message);
     }
 
     public static void showShort(View parent, int message){

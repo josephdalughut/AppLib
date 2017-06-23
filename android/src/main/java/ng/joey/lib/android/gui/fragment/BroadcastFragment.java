@@ -15,7 +15,7 @@ import ng.joey.lib.java.util.Value;
  * Created by root on 4/12/17.
  */
 
-public abstract class BroadcastFragtivity extends Fragtivity {
+public abstract class BroadcastFragment extends Fragment {
 
     private BroadcastReceiver receiver;
 

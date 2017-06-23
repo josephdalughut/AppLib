@@ -16,6 +16,7 @@ import java.util.List;
  * Copyright (c) 2016 LITIGY. All rights reserved.
  * http://www.litigy.com
  */
+@Deprecated
 public class GenericRecyclerViewItemAdapter<T, ViewHolderImpl extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<ViewHolderImpl> {
 
 

@@ -9,8 +9,6 @@ import android.graphics.RectF;
 import android.graphics.Region;
 import android.support.design.widget.CoordinatorLayout;
 import android.util.AttributeSet;
-import android.view.MotionEvent;
-import android.view.View;
 
 import ng.joey.lib.android.R;
 import ng.joey.lib.java.util.Value;
@@ -103,14 +101,14 @@ public class RoundedCoordinatorLayout extends CoordinatorLayout {
         rect = new RectF();
         if(Value.IS.nullValue(attrs))
             return;
-        TypedArray array = getContext().obtainStyledAttributes(attrs, R.styleable.RoundedFrameLayout);
-        backgroundColor = array.getColor(R.styleable.RoundedFrameLayout_backgroundColor, DEFAULT_BACKGROUND_COLOR);
+        TypedArray array = getContext().obtainStyledAttributes(attrs, R.styleable.RoundedCoordinatorLayout);
+        backgroundColor = array.getColor(R.styleable.RoundedCoordinatorLayout_backgroundColor, DEFAULT_BACKGROUND_COLOR);
         paint.setColor(backgroundColor);
-        radiusTopLeft = array.getDimensionPixelSize(R.styleable.RoundedFrameLayout_radiusTopLeft, DEFAULT_RADIUS_TOP_LEFT);
-        radiusTopRight = array.getDimensionPixelSize(R.styleable.RoundedFrameLayout_radiusTopRight, DEFAULT_RADIUS_TOP_RIGHT);
-        radiusBottomLeft = array.getDimensionPixelSize(R.styleable.RoundedFrameLayout_radiusBottomLeft, DEFAULT_RADIUS_BOTTOM_LEFT);
-        radiusBottomRight = array.getDimensionPixelSize(R.styleable.RoundedFrameLayout_radiusBottomRight, DEFAULT_RADIUS_BOTTOM_RIGHT);
-        clipPath = array.getBoolean(R.styleable.RoundedFrameLayout_clipPath, false);
+        radiusTopLeft = array.getDimensionPixelSize(R.styleable.RoundedCoordinatorLayout_radiusTopLeft, DEFAULT_RADIUS_TOP_LEFT);
+        radiusTopRight = array.getDimensionPixelSize(R.styleable.RoundedCoordinatorLayout_radiusTopRight, DEFAULT_RADIUS_TOP_RIGHT);
+        radiusBottomLeft = array.getDimensionPixelSize(R.styleable.RoundedCoordinatorLayout_radiusBottomLeft, DEFAULT_RADIUS_BOTTOM_LEFT);
+        radiusBottomRight = array.getDimensionPixelSize(R.styleable.RoundedCoordinatorLayout_radiusBottomRight, DEFAULT_RADIUS_BOTTOM_RIGHT);
+        clipPath = array.getBoolean(R.styleable.RoundedCoordinatorLayout_clipPath, false);
         array.recycle();
     }
 

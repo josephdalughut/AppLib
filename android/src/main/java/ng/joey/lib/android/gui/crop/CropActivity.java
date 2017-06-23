@@ -66,7 +66,7 @@ public class CropActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         Crop.Log.d("Crop activity result");
-        if(resultCode!=RESULT_OK ){
+        if(resultCode==RESULT_OK ){
             switch (requestCode){
                 case Crop.GALLERY:
                     if(Value.IS.ANY.nullValue(data, data.getData())){
@@ -104,6 +104,9 @@ public class CropActivity extends AppCompatActivity {
                     releaseListener();
                 }
             })).commitAllowingStateLoss();
+        }else{
+            finish();
+            resultListener.onError();
         }
 
     }

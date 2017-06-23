@@ -15,8 +15,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="@dimen/height_toolbar"
-        android:minHeight="@dimen/height_toolbar_normal"
-        app:cardCornerRadius="@dimen/radius_card_simple_imageView"
+        android:minHeight="@dimen/height_toolbar"
+        app:cardCornerRadius="@dimen/margin_item_half"
         app:cardBackgroundColor="@color/white"
         >
 
@@ -27,13 +27,13 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/height_toolbar_normal"
+                android:layout_height="@dimen/height_toolbar"
                 android:orientation="horizontal"
                 >
 
                 <ImageButton
                     android:id="@+id/cancelButton"
-                    android:layout_width="@dimen/height_toolbar_normal"
+                    android:layout_width="@dimen/height_toolbar"
                     android:layout_height="match_parent"
                     android:src="@drawable/ic_action_close"
                     android:tint="@color/flat_asbestos"
@@ -49,12 +49,10 @@
                     android:gravity="center"
                     android:textAllCaps="true"
                     app:fontAppearance="body2"
+                    android:paddingRight="@dimen/height_toolbar"
+                    android:paddingEnd="@dimen/height_toolbar"
                     />
 
-
-                <android.support.v4.widget.Space
-                    android:layout_width="@dimen/height_toolbar_normal"
-                    android:layout_height="match_parent" />
 
             </LinearLayout>
 
@@ -67,23 +65,24 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="@dimen/height_toolbar_normal"
+                android:minHeight="@dimen/height_toolbar"
                 android:orientation="horizontal"
-                android:layout_marginLeft="@dimen/height_toolbar_normal"
-                android:layout_marginRight="@dimen/height_toolbar_normal"
+                android:layout_marginLeft="@dimen/height_toolbar"
+                android:layout_marginRight="@dimen/height_toolbar"
                 android:gravity="center"
                 >
 
                 <FrameLayout
-                    android:layout_width="@dimen/height_toolbar_normal"
-                    android:layout_height="@dimen/height_toolbar_normal">
+                    android:layout_width="@dimen/height_toolbar"
+                    android:layout_height="@dimen/height_toolbar">
 
                     <ProgressBar
                         android:id="@+id/barProgress"
-                        android:layout_width="@dimen/size_pigressBar_small"
-                        android:layout_height="@dimen/size_pigressBar_small"
+                        android:layout_width="@dimen/size_progressBar_small"
+                        android:layout_height="@dimen/size_progressBar_small"
                         android:indeterminate="true"
                         android:layout_gravity="center"
+                        android:indeterminateTint="?attr/cropColorAccent"
                         />
 
                 </FrameLayout>
@@ -92,7 +91,7 @@
                     android:id="@+id/messageTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:minHeight="@dimen/height_toolbar_normal"
+                    android:minHeight="@dimen/height_toolbar"
                     android:textColor="@color/flat_asbestos"
                     android:gravity="left|center"
                     app:fontAppearance="caption"

@@ -18,22 +18,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Joey Dalu on 8/16/16 at 1:47 PM
+ * @author Joey Dalu
  */
 public class Locale {
-
-    /*
-    public static void main(String[] args){
-        List<Locale> locales = null;
-        try {
-            locales = getLocales();
-            System.out.println("Locales size: "+locales.size()+" and first is "+locales.get(0).toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-            System.out.println("exception loading locales, is: "+e.getMessage());
-        }
-    }
-    */
 
     public static class Subdivision {
         public static final class Constants {
@@ -149,8 +136,8 @@ public class Locale {
                 JsonArray array = null;
                 InputStreamReader reader = new InputStreamReader(str);
                 array = (JsonArray) parser.parse(reader);
-                for (Object o : array) {
-                    Subdivision subdivision = SubDivisionDeserializer.deserialize((JsonObject) o);
+                for (JsonElement o : array) {
+                    Subdivision subdivision = JsonUtils.getBuilder().create().fromJson(o, Subdivision.class);
                     subdivisions.add(subdivision);
                 }
                 return subdivisions;
@@ -532,8 +519,8 @@ public class Locale {
             JsonArray array = null;
             InputStreamReader reader = new InputStreamReader(str);
             array = (JsonArray) parser.parse(reader);
-            for (Object o : array) {
-                Locale locale = LocaleDeserializer.deserialize((JsonObject) o);
+            for (JsonElement o : array) {
+                Locale locale = JsonUtils.getBuilder().create().fromJson(o, Locale.class);
                 locales.add(locale);
             }
             return locales;

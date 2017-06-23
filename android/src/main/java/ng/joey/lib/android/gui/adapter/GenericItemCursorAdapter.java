@@ -16,6 +16,7 @@ import ng.joey.lib.java.util.Value;
  * Copyright (c) 2016 LITIGY. All rights reserved.
  * http://www.litigy.com
  */
+@Deprecated
 public class GenericItemCursorAdapter<ViewHolderImpl extends RecyclerView.ViewHolder> extends BaseAdapter {
 
     Cursor cursor;

@@ -166,7 +166,9 @@ class CropUtil {
         dialog.setTitle(R.string.title_cropping);
         dialog.setCancelable(false);
         dialog.show();
-        new Thread(new BackgroundJob(activity, job, dialog, handler)).start();
+        Thread thread = new Thread(new BackgroundJob(activity, job, dialog, handler));
+        thread.setPriority(Thread.MAX_PRIORITY);
+        thread.start();
     }
 
     private static class BackgroundJob implements Runnable {

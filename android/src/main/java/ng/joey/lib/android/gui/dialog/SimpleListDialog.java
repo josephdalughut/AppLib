@@ -27,7 +27,7 @@ import java.util.List;
  * http://www.litigy.com
  */
 @Deprecated
-public class SimpleListDialog extends DialogFragtivity {
+public class SimpleListDialog extends DialogFragment {
 
     public static SimpleListDialog getInstance(String title, List<String> items,
                                                DoubleReceiver<String, Integer> callbackReceiver,
@@ -115,15 +115,11 @@ public class SimpleListDialog extends DialogFragtivity {
     }
 
     @Override
-    public void findViews() {
+    public void setupViews() {
         cancelButton = (ImageButton) findViewById(R.id.cancelButton);
         titleTextView = (TextView) findViewById(R.id.titleTextView);
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         progressBar = (ProgressBar) findViewById(R.id.barProgress);
-    }
-
-    @Override
-    public void setupViews() {
         showProgress();
         titleTextView.setText(title);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));

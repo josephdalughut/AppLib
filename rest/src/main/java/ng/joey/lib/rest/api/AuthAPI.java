@@ -136,8 +136,8 @@ public class AuthAPI {
         // Persistence.ofy().delete().entity(oldRefreshToken);
         Map<String, String> data = new HashMap<>();
         data.put(ng.joey.lib.rest.entity.Token.Type.REFRESH_TOKEN, ng.joey.lib.rest.util.JsonUtils.getBuilder().create().toJson(newRefreshToken));
-        accessToken.setAccompanyingData(data);
-        return (ng.joey.lib.rest.entity.Token) accessToken.setAccompanyingData(data);
+        accessToken.setData(data);
+        return (ng.joey.lib.rest.entity.Token) accessToken.setData(data);
     }
 
     @ApiMethod(
@@ -152,16 +152,16 @@ public class AuthAPI {
     /**
      * Creates and Returns an access and refresh token after authenticating a {@link ng.joey.lib.rest.entity.User} and a {@link ng.joey.lib.rest.entity.Client}.
      * @param request the {@link HttpServletRequest} making this call.
-     * @param datastoreUser the datastore version of the {@link ng.joey.lib.rest.entity.User} to be authenticated.
+     * @param userId the datastore version of the {@link ng.joey.lib.rest.entity.User} to be authenticated.
      * @param clientId the ID of the {@link ng.joey.lib.rest.entity.Client} to be authenticated.
      * @param clientSecret the secret of the {@link ng.joey.lib.rest.entity.Client} to be authenticated.
      * @return a map containing two tokens, keys: "access" and "refresh" for the access and refresh tokens respectively.
      * @throws UnauthorizedException if the {@link ng.joey.lib.rest.entity.User} or {@link ng.joey.lib.rest.entity.Client} fails authentication.
      */
-    public static Map<String, ng.joey.lib.rest.entity.Token> getToken(HttpServletRequest request, ng.joey.lib.rest.entity.User datastoreUser, Long clientId, String clientSecret) throws UnauthorizedException {
+    public static Map<String, ng.joey.lib.rest.entity.Token> getToken(HttpServletRequest request, String userId, Long clientId, String clientSecret) throws UnauthorizedException {
         if(Value.IS.nullValue(request) || !request.isSecure())
             throw new UnauthorizedException("unauthorized: bad request: https required");
-        if(Value.IS.nullValue(datastoreUser))
+        if(Value.IS.emptyValue(userId))
             throw new UnauthorizedException("unauthorized: bad request: user password required");
         if(Value.IS.ANY.emptyValue(clientId, clientSecret))
             throw new UnauthorizedException("unauthorized: bad request: client required");
@@ -172,7 +172,7 @@ public class AuthAPI {
         final ng.joey.lib.rest.entity.Token accessToken = new ng.joey.lib.rest.entity.Token()
                 .setId(Crypto.Random.uuidClear())
                 .setClientId(clientId)
-                .setUserId(Value.TO.stringValue(datastoreUser.getId()))
+                .setUserId(userId)
                 .setScope(ng.joey.lib.rest.entity.Token.Scope.CONFIDENTIAL)
                 .setExpiresAt(expiresAt.getMillis())
                 .setType(ng.joey.lib.rest.entity.Token.Type.ACCESS_TOKEN);
@@ -181,7 +181,7 @@ public class AuthAPI {
                 .setId(Crypto.Random.uuidClear())
                 .setScope(accessToken.getScope())
                 .setClientId(clientId)
-                .setUserId(Value.TO.stringValue(datastoreUser.getId()))
+                .setUserId(userId)
                 .setExpiresAt(fourWeeks.getMillis())
                 .setType(ng.joey.lib.rest.entity.Token.Type.REFRESH_TOKEN);
         refreshToken.setCreatedAt(accessToken.getCreatedAt()).setUpdatedAt(accessToken.getUpdatedAt());

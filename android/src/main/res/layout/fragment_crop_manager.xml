@@ -18,7 +18,7 @@
         android:layout_width="@dimen/height_toolbar"
         android:src="@drawable/ic_action_close"
         android:background="@drawable/selector_dark"
-        android:layout_gravity="top|left"
+        android:layout_gravity="top|start"
         android:layout_height="@dimen/height_toolbar"
         />
 
@@ -28,9 +28,9 @@
         android:layout_height="wrap_content"
         app:fabSize="normal"
         android:id="@+id/done"
-        android:layout_gravity="bottom|right"
+        android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/margin_page"
-        app:backgroundTint="@color/flat_belize_hole"
+        app:backgroundTint="?attr/cropColorAccent"
         android:src="@drawable/ic_action_done"
         />
 

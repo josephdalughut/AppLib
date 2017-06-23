@@ -6,12 +6,6 @@ import android.util.AttributeSet;
 
 import ng.joey.lib.android.gui.view.textView.TextView;
 
-/**
- * Created by Joey Dalughut on 8/10/16 at 5:00 AM,
- * Project: Litigy Libraries.
- * Copyright (c) 2016 LITIGY. All rights reserved.
- * http://www.litigy.com
- */
 public class Button extends AppCompatButton {
     public Button(Context context) {
         super(context);
@@ -26,5 +20,4 @@ public class Button extends AppCompatButton {
         super(context, attrs, defStyleAttr);
         TextView.applyAttributes(attrs, this);
     }
-
 }

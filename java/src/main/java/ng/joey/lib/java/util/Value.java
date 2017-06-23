@@ -13,9 +13,7 @@ import java.util.UUID;
 import java.util.regex.Pattern;
 
 /**
- * Created by Joey Dalughut on 8/6/16 at 4:03 PM.
- * Copyright (c) 2016 LITIGY. All rights reserved.
- * http://www.litigy.com
+ * @author Joey Dalu
  */
 public class Value {
 

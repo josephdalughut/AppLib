@@ -5,9 +5,7 @@ import org.joda.time.DateTimeZone;
 
 
 /**
- * Created by Joey on 22/02/16 at 11:27 PM.
- * Project : Medio.
- * Copyright (c) 2016 Meengle. All rights reserved.
+ * @author Joey Dalu
  */
 public class Time {
 

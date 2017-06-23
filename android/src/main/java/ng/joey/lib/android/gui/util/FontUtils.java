@@ -1,6 +1,7 @@
 package ng.joey.lib.android.gui.util;
 
 import android.graphics.Typeface;
+import android.support.design.widget.TextInputLayout;
 import android.util.TypedValue;
 import android.widget.TextView;
 
@@ -130,6 +131,21 @@ public class FontUtils {
                 fontSize.getFontStyle().getAssetName()));
         textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, textView.getResources().getDimensionPixelSize(fontSize.getDimenRes()));
         return textView;
+    }
+
+    /**
+     * Apply a fontStyle to a {@link TextView}
+     * @param fontStyle the font style to set
+     * @param textInputLayout the {@link TextView}
+     * @return {@param textView} with fontStyle set to {@param fontStyle}
+     */
+    public static TextInputLayout applyFontStyle(FontStyle fontStyle, TextInputLayout textInputLayout){
+        if(Value.IS.ANY.nullValue(textInputLayout, fontStyle)||textInputLayout.isInEditMode())
+            return textInputLayout;
+        if(!textInputLayout.isInEditMode())
+            textInputLayout.setTypeface(Typeface.createFromAsset(textInputLayout.getContext().getAssets(),
+                    fontStyle.getAssetName()));
+        return textInputLayout;
     }
 
 }

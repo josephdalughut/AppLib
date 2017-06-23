@@ -5,11 +5,12 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+
+import butterknife.ButterKnife;
 import ng.joey.lib.android.R;
 import ng.joey.lib.java.util.Value;
 
@@ -19,7 +20,7 @@ import ng.joey.lib.java.util.Value;
  * Copyright (c) 2016 LITIGY. All rights reserved.
  * http://www.litigy.com
  */
-public abstract class DialogFragtivity extends DialogFragment {
+public abstract class DialogFragment extends android.support.v4.app.DialogFragment {
 
     private View rootView;
 
@@ -27,7 +28,7 @@ public abstract class DialogFragtivity extends DialogFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView(inflater.inflate(layoutId(), container, false));
         getDialog().setCancelable(cancelable());
-        findViews();
+        ButterKnife.bind(this, rootView);
         setupViews();
         return rootView;
     }
@@ -35,7 +36,7 @@ public abstract class DialogFragtivity extends DialogFragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setStyle(DialogFragtivity.STYLE_NORMAL, R.style.DialogFragtivity);
+        setStyle(DialogFragment.STYLE_NORMAL, R.style.DialogFragtivity);
         bundle(getArguments());
     }
 
@@ -75,11 +76,6 @@ public abstract class DialogFragtivity extends DialogFragment {
     public abstract void bundle(Bundle bundle);
 
     /**
-     * Called after the fragment has been created and its view inflated
-     */
-    public abstract void findViews();
-
-    /**
      * Called after findViews()
      */
     public abstract void setupViews();
@@ -105,11 +101,13 @@ public abstract class DialogFragtivity extends DialogFragment {
     @Override
     public void onStart() {
         super.onStart();
-        if(!Value.IS.nullValue(getDialog())){
+        if(!Value.IS.nullValue(getDialog()) && !Value.IS.nullValue(getDialog().getWindow())){
             getDialog().getWindow().setLayout(layoutWidth(), layoutHeight());
             getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             getDialog().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
-            getDialog().getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                getDialog().getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            }
         }
     }
 
